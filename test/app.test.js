@@ -13,7 +13,7 @@ test("GET /version returns service and version", async () => {
     const { port } = server.address();
     const response = await fetch(`http://127.0.0.1:${port}/version`);
     assert.equal(response.status, 200);
-    assert.deepEqual(await response.json(), { service: "platform-demo", version: "1.0.0" });
+    assert.deepEqual(await response.json(), { service: "platform-demo", version: "1.0.1" });
   } finally {
     await new Promise((resolve) => server.close(resolve));
   }
